@@ -11,5 +11,5 @@ resource "null_resource" "null2" {
 resource "null_resource" "null3" {
 }
 
-resource "null_resourceasdasdf" "null4" {
+resource "null_resource" "null4" {
 }

@@ -27,4 +27,3 @@ Outputs:
     Value:
       Fn::GetAtt:
         - Function
-        - Arn

@@ -10,6 +10,7 @@ Resources:
       Role:
         Fn::GetAtt:
           - FunctionRole
+          - Arn
       Runtime: nodejs16.x
       Code:
         ZipFile:
@@ -27,3 +28,4 @@ Outputs:
     Value:
       Fn::GetAtt:
         - Function
+        - Arn

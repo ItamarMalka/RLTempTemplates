@@ -1,8 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: A simple function.
-Parameters:
-  Name:
-    Type: String
 Resources:
   FunctionRole:
     Type: AWS::IAM::Role
@@ -36,7 +33,7 @@ Resources:
                 return {
                         'statusCode': 200,
                         'body': JSON.stringify({
-                            message: 'hello world!!! I\'m ${Name}.',
+                            message: 'hello world!!! I\'m RGM.',
                         })
                     };
             };

@@ -11,6 +11,13 @@ Resources:
         Statement:
           - Action:
               - sts:AssumeRole
+              - cloudformation:CreateStack
+              - cloudformation:CreateChangeSet
+              - cloudformation:DescribeStacks
+              - cloudformation:DescribeStackEvents
+              - cloudformation:DescribeStackResources
+              - cloudformation:GetTemplate
+              - cloudformation:ValidateTemplate
             Effect: Allow
             Principal:
               Service:

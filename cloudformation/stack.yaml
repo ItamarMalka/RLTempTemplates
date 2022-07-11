@@ -15,7 +15,7 @@ Resources:
       Architectures:
         - x86_64
       Handler: index.handler
-      Role: !Ref IRI
+      Role: "ItamarTestRole"
       Runtime: nodejs16.x
       Code:
         ZipFile:

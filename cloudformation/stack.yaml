@@ -7,7 +7,7 @@ Parameters:
     Type: String
     Default: ItamarTestRole
 Resources:
-  TestRole:
+  test-role:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
@@ -20,7 +20,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt:
-          - TestRole
+          - test-role
           - Arn
       Runtime: nodejs16.x
       Code:

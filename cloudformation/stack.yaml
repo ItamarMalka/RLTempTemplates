@@ -12,7 +12,7 @@ Resources:
     Properties:
       Path: '/'
       Roles:
-        - !Ref ItamarTestRole
+        - 'ItamarTestRole'
   Function:
     Type: AWS::Lambda::Function
     Properties:

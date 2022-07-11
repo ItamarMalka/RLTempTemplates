@@ -10,9 +10,8 @@ Resources:
   TestRole:
     Type: AWS::IAM::InstanceProfile
     Properties:
-      Path: '/'
-      Roles:
-        - 'ItamarTestRole'
+      Path: "/"
+      Roles: "ItamarTestRole"
   Function:
     Type: AWS::Lambda::Function
     Properties:

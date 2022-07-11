@@ -3,6 +3,9 @@ Description: A simple function.
 Parameters:
   Name:
     Type: String
+  RoleNameRoleParameter: {
+      Type: String,
+      Default: ItamarTestRole
 Resources:
   Function:
     Type: AWS::Lambda::Function
@@ -12,7 +15,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt:
-          - "arn:aws:iam::326535729404:role/ItamarTestRole"
+          - RoleNameRoleParameter
           - Arn
       Runtime: nodejs16.x
       Code:

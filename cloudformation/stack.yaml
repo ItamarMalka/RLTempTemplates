@@ -11,7 +11,8 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [!GetAtt ItamarTestRole.Arn]
+      Roles:
+        - !Ref ItamarTestRole
   Function:
     Type: AWS::Lambda::Function
     Properties:

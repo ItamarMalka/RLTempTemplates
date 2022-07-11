@@ -3,15 +3,14 @@ Description: A simple function.
 Parameters:
   Name:
     Type: String
-  RoleNameRoleParameter:
-    Type: String
-    Default: ItamarTestRole
 Resources:
   TestRole:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: "/"
-      Roles: "ItamarTestRole"
+      Roles: 
+        - 
+          Ref: "ItamarTestRole"
   Function:
     Type: AWS::Lambda::Function
     Properties:

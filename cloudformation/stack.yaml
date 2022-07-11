@@ -12,7 +12,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt:
-          - "ItamarTestRole"
+          - "arn:aws:iam::326535729404:role/ItamarTestRole"
           - Arn
       Runtime: nodejs16.x
       Code:

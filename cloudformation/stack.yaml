@@ -4,27 +4,6 @@ Parameters:
   Name:
     Type: String
 Resources:
-  FunctionRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action:
-              - sts:AssumeRole
-              - cloudformation:CreateStack
-              - cloudformation:CreateChangeSet
-              - cloudformation:DescribeStacks
-              - cloudformation:DescribeStackEvents
-              - cloudformation:DescribeStackResources
-              - cloudformation:GetTemplate
-              - cloudformation:ValidateTemplate
-            Effect: Allow
-            Principal:
-              Service:
-                - lambda.amazonaws.com
-        Version: "2012-10-17"
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
   Function:
     Type: AWS::Lambda::Function
     Properties:
@@ -33,7 +12,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt:
-          - FunctionRole
+          - ItamarTestRole
           - Arn
       Runtime: nodejs16.x
       Code:

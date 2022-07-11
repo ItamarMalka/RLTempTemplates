@@ -9,8 +9,7 @@ Resources:
     Properties:
       Path: "/"
       Roles: 
-        - 
-          Ref: "ItamarTestRole"
+        - "arn:aws:iam::326535729404:role/ItamarTestRole"
   Function:
     Type: AWS::Lambda::Function
     Properties:

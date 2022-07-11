@@ -3,9 +3,9 @@ Description: A simple function.
 Parameters:
   Name:
     Type: String
-  RoleNameRoleParameter: {
-      Type: String,
-      Default: ItamarTestRole
+  RoleNameRoleParameter:
+    Type: String,
+    Default: ItamarTestRole
 Resources:
   Function:
     Type: AWS::Lambda::Function

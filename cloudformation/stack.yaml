@@ -4,12 +4,11 @@ Parameters:
   Name:
     Type: String
 Resources:
-  TestRole:
+  ItamarRoleInstance:
     Type: AWS::IAM::InstanceProfile
     Properties:
-      Path: "/"
-      Roles: 
-        - "arn:aws:iam::326535729404:role/ItamarTestRole"
+      Path: /
+      Roles: "ItamarTestRole"
   Function:
     Type: AWS::Lambda::Function
     Properties:
@@ -18,7 +17,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt:
-          - TestRole
+          - ItamarRoleInstance
           - Arn
       Runtime: nodejs16.x
       Code:

@@ -7,6 +7,11 @@ Parameters:
     Type: String
     Default: ItamarTestRole
 Resources:
+  TestRole:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: '/'
+      Roles: ['ItamarTestRole']
   Function:
     Type: AWS::Lambda::Function
     Properties:

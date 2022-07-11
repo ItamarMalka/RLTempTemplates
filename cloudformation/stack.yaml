@@ -4,7 +4,7 @@ Parameters:
   Name:
     Type: String
 Resources:
-  ItamarRoleInstance:
+  IRI:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: /
@@ -15,7 +15,7 @@ Resources:
       Architectures:
         - x86_64
       Handler: index.handler
-      Role: !Ref ItamarRoleInstance
+      Role: !Ref IRI
       Runtime: nodejs16.x
       Code:
         ZipFile:

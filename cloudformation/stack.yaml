@@ -20,7 +20,7 @@ Resources:
       Handler: index.handler
       Role:
         Fn::GetAtt:
-          - RoleNameRoleParameter
+          - TestRole
           - Arn
       Runtime: nodejs16.x
       Code:

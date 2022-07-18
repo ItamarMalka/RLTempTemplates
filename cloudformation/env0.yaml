@@ -20,6 +20,11 @@ deploy:
         - echo 123
       after:
         - echo 567
+destroy:
+  steps:
+    setupVariables:
+      after: 
+        - echo "Good morning!"
     cfListStackResources:
       before:
         - echo 123

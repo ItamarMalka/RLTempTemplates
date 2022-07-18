@@ -15,6 +15,11 @@ deploy:
         - echo 123
       after:
         - echo 567
+    cfOutput:
+      before:
+        - echo 123
+      after:
+        - echo 567
     cfListStackResources:
       before:
         - echo 123

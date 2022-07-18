@@ -7,7 +7,7 @@ deploy:
         - echo "Good morning!"
     cfCreateChangeSet:
       before:
-        - echo 123
+        - ghjgjhghj
       after:
         - echo 567
     cfDeploy:

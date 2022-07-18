@@ -5,3 +5,23 @@ deploy:
     setupVariables:
       after: 
         - echo "Good morning!"
+    cfCreateChangeSet:
+      before:
+        - echo 123
+      after:
+        - echo 567
+    cfDeploy:
+      before:
+        - echo 123
+      after:
+        - echo 567
+    cfListStackResources:
+      before:
+        - echo 123
+      after:
+        - echo 567    
+    cfDeleteStack:
+      before:
+        - echo 123
+      after:
+        - echo 567

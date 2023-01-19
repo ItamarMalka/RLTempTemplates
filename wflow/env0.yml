@@ -3,4 +3,4 @@ deploy:
   steps:
     setupVariables:
       after:
-        echo "kaka"
+        - echo "kaka"

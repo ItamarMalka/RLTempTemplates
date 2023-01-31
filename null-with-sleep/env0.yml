@@ -1,66 +1,60 @@
 version: 1
-  steps:
-    setupVariables:
-      after:
-        - echo "Good morning!1"
+  deploy:
+    steps:
+      setupVariables:
+        after:
+          - echo "Good morning!1"
 
-    terraformInit:
-      before:
-        - echo "Good morning!2"
-      after:
-        - echo "Good morning!3"
+      terraformInit:
+        before:
+          - echo "Good morning!2"
+        after:
+          - echo "Good morning!3"
 
-    terraformPlan:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
+      terraformPlan:
+        before:
+          - echo "Good morning!3"
+        after:
+          - echo "Good morning!3"
 
-    terraformApply:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
+      terraformApply:
+        before:
+          - echo "Good morning!3"
+        after:
+          - echo "Good morning!3"
 
-    storeState:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
+      storeState:
+        before:
+          - echo "Good morning!3"
+        after:
+          - echo "Good morning!3"
 
-    terraformOutput:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
+      terraformOutput:
+        before:
+          - echo "Good morning!3"
+        after:
+          - echo "Good morning!3"
 
-destroy:
-  onCompletion:
-    - echo "Good morning!3"
-  onSuccess:
-    - echo "Good morning!3"
-  onFailure:
-    - echo "Good morning!3"
+    destroy:
+      steps:
+        setupVariables:
+          after:
+            - echo "Good morning!3"
 
-  steps:
-    setupVariables:
-      after:
-        - echo "Good morning!3"
+        terraformInit:
+          before:
+            - echo "Good morning!3"
+          after:
+            - echo "Good morning!3"
 
-    terraformInit:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
+        terraformPlan:
+          before:
+            - echo "Good morning!3"
+          after:
+            - echo "Good morning!3"
 
-    terraformPlan:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
-
-    terraformDestroy:
-      before:
-        - echo "Good morning!3"
-      after:
-        - echo "Good morning!3"
+        terraformDestroy:
+          before:
+            - echo "Good morning!3"
+          after:
+            - echo "Good morning!3"

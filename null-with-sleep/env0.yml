@@ -13,7 +13,7 @@ deploy:
 
     terraformPlan:
       before:
-        - echo "Good morning!3"
+        - echo "kaki"
       after:
         - echo "Good morning!3"
 

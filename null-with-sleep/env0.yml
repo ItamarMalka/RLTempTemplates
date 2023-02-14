@@ -3,7 +3,7 @@ deploy:
   steps:
     setupVariables:
       after:
-        - echo "Good morning!13333"
+        - echo "Good morning!"
 
     terraformInit:
       before:

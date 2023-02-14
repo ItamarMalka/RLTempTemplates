@@ -25,15 +25,15 @@ deploy:
 
     storeState:
       before:
-        - echo "Good morning!3"
+        - echo "Good morning!"
       after:
-        - echo "Good morning!3"
+        - echo "Good morning!"
 
     terraformOutput:
       before:
-        - echo "Good morning!3"
+        - echo "Good morning!"
       after:
-        - echo "Good morning!3"
+        - echo "Good morning!"
 
 destroy:
   steps:

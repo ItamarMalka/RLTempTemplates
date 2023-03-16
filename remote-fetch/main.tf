@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname = "backend-dev.api.dev.env0.com"
-    organization = "9f5fbaa6-1fdd-47c1-98fb-19a4eb837723.517e576e-f235-4038-9395-c43676b1276b"
+    organization = "00a043d9-971b-45e6-99f3-8a689b3715c9"
     workspaces {
       name = "remote-fetch-kaki"
     }

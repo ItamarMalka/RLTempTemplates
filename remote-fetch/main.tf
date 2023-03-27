@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
-    hostname = "backend-pr11477.api.dev.env0.com"
-    organization = "7b14a383-bf03-49bd-ace2-af648fe28a07"
+    hostname = "backend-pr11496.api.dev.env0.com"
+    organization = "85e50daf-8893-4532-a852-e528c30f4102"
     workspaces {
       name = "remote-fetch"
     }

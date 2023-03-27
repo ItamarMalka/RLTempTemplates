@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname = "backend-pr11496.api.dev.env0.com"
-    organization = "85e50daf-8893-4532-a852-e528c30f4102"
+    organization = "9f5fbaa6-1fdd-47c1-98fb-19a4eb837723"
     workspaces {
       name = "remote-fetch-f"
     }
@@ -12,7 +12,7 @@ data "terraform_remote_state" "test" {
  backend = "remote"
  config = {
    hostname     = "backend-pr11496.api.dev.env0.com"
-   organization = "85e50daf-8893-4532-a852-e528c30f4102"
+   organization = "9f5fbaa6-1fdd-47c1-98fb-19a4eb837723"
    workspaces = {
      name = "remote-fetch"
    }

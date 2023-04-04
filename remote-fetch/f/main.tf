@@ -23,5 +23,5 @@ resource "null_resource" "null" {
 }
 
 output "fetched-test" {
-  value = data.terraform_remote_state.test.outputs.test
+  value = "fetched-${data.terraform_remote_state.test.outputs.test}"
 }

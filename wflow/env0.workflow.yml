@@ -9,7 +9,7 @@ environments:
     templateName: wflow2
     needs: [service1]
   service3:
-    name: service3
+    name: service4
     templateName: jaTemplate
     needs: [service2]
    

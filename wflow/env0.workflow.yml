@@ -8,3 +8,8 @@ environments:
     name: service2
     templateName: wflow2
     needs: [service1]
+  service3:
+    name: service3
+    templateName: jaTemplate
+    needs: [service2]
+   

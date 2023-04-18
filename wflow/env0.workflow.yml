@@ -8,3 +8,5 @@ environments:
     name: service2
     templateName: wflow2
     needs: [service1]
+settings:
+  environmentRemovalStrategy: 'destroy'

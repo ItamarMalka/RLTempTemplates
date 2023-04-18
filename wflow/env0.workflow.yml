@@ -10,9 +10,5 @@ environments:
     needs: [service1]
   service3:
     name: service3
-    templateName: wflow2
-    needs: [service2]  
-  service4:
-    name: service4
-    templateName: wflow2
-    needs: [service3]  
+    templateName: wflow3
+    needs: [service2]

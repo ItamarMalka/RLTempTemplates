@@ -1,5 +1,5 @@
 provider "nul" {
-  
+  alias = "another"
 }
 resource "null_resource" "hello2" {
   provisioner "local-exec" {

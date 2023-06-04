@@ -6,17 +6,10 @@ resource "random_string" "random" {
   min_lower = 16
 }
 
-resource "aws_s3_bucket" "website_bucket" {
-  bucket = "hello-env0-${random_string.random.result}"
-  acl    = "public-read"
-
-  force_destroy = true 
-  
-  versioning {
-    enabled = true
-  }
+resource "null_resource" "resource" {
 }
 
-output "bucket_name" {
-  value =  "${aws_s3_bucket.website_bucket.arn}"
+output "null_resource_id" {
+  description = "The `id` of the `null_resource` resource in this module."
+  value       = "${null_resource.resource.id}"
 }

@@ -11,18 +11,6 @@ resource "aws_s3_bucket" "website_bucket" {
   force_destroy = true
 }
 
-resource "aws_s3_bucket_website_configuration" "website_config" {
-  bucket = aws_s3_bucket.website_bucket.id
-
-  index_document {
-    suffix = "index.html"
-  }
-
-  error_document {
-    key = "index.html"
-  }
-}
-
 resource "aws_s3_bucket_ownership_controls" "bucket_ownership" {
   bucket = aws_s3_bucket.website_bucket.id
   rule {
@@ -60,13 +48,6 @@ resource "aws_s3_bucket_policy" "website_bucket_policy" {
       },
     ]
   })
-}
-
-resource "aws_s3_object" "object" {
-  bucket = aws_s3_bucket.website_bucket.bucket
-  key    = "index.html"
-  source = "index.html"
-  content_type = "text/html"
 }
 
 output "bucket_name" {

@@ -68,3 +68,7 @@ resource "aws_s3_object" "object" {
   source = "index.html"
   content_type = "text/html"
 }
+
+output "bucket_name" {
+  value =  "${aws_s3_bucket.website_bucket.arn}"
+}

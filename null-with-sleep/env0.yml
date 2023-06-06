@@ -5,14 +5,14 @@ deploy:
     terraformInit:
       before:
         - name: "Just create some folder"
-        run: mkdir someDir; echo '123123' > someDir/kaki.txt
+          run: mkdir someDir; echo '123123' > someDir/kaki.txt
         - name: "Print something"
-        run: echo 'printing something'
+          run: echo 'printing something'
 destroy:
   steps:
     terraformInit:
       before:
         - name: "Just create some folder"
-        run: cat someDir/kaki.txt
+          run: cat someDir/kaki.txt
         - name: "Print something"
-        run: echo 'printing something'
+          run: echo 'printing something'

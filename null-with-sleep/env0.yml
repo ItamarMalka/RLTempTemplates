@@ -1,7 +1,18 @@
-version: 1
+version: 2
 
 deploy:
   steps:
-    setupVariables:
-      after: 
-        - echo "Good morning!!"
+    terraformInit:
+      before:
+        - name: "Just create some folder"
+        run: mkdir someDir; echo '123123' > someDir/kaki.txt
+        - name: "Print something"
+        run: echo 'printing something'
+destroy:
+  steps:
+    terraformInit:
+      before:
+        - name: "Just create some folder"
+        run: cat someDir/kaki.txt
+        - name: "Print something"
+        run: echo 'printing something'

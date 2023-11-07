@@ -12,9 +12,13 @@ resource "null_resource" "null33" {
 }
 
 resource "random_id" "random" {
-  byte_length = 15
+  byte_length = 500000
 }
 
-output "long" {
+output "long1" {
+  value= random_id.random.hex
+}
+
+output "long2" {
   value= random_id.random.hex
 }

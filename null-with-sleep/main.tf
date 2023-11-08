@@ -12,7 +12,7 @@ resource "null_resource" "null33" {
 }
 
 resource "random_id" "random" {
-  byte_length = 500000
+  byte_length = 4000000
 }
 
 output "long1" {

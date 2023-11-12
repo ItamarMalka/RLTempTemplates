@@ -5,7 +5,7 @@ locals {
 
 resource "aws_iam_role" "remote_state_access_role" {
   name = "remote-state-access-role"
-  max_session_duration = fifteen_minutes
+  max_session_duration = local.fifteen_minutes
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",

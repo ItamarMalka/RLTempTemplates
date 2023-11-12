@@ -1,5 +1,5 @@
 locals {
-  env0_aws_account_id = "913128560467"
+  env0_aws_account_id = "326535729404"
 }
 
 resource "aws_iam_role" "remote_state_access_role" {

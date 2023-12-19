@@ -4,5 +4,6 @@ deploy:
   steps:
     setupVariables:
       after: 
-        run |
+      - name: 'complex command run'
+        run: |
         ls || echo 123

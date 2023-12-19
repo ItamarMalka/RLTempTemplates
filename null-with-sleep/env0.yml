@@ -4,5 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - run |
-        ls || echo "Good morning!!"
+        - ./script.sh

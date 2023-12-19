@@ -5,4 +5,5 @@ deploy:
     setupVariables:
       after: 
       - name: 'complex command run'
-        run: ls || ./script.sh
+        run: |
+        ls || ./script.sh

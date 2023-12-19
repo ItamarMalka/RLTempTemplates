@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - sudo ./script.sh
+        - ~/script.sh

@@ -1,7 +1,7 @@
-version: 1
+version: 2
 
 deploy:
   steps:
     setupVariables:
       after: 
-        - echo "Good morning!!"
+        - ls || echo "Good morning!!"

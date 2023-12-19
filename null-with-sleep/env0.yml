@@ -6,4 +6,4 @@ deploy:
       after: 
       - name: 'complex command run'
         run: |
-        ls || echo 123
+        ls || echo 123;

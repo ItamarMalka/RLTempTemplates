@@ -5,4 +5,4 @@ deploy:
     setupVariables:
       after: 
       - name: 'complex command run'
-        run: ls || echo 123
+        run: sleep 10 || echo 123

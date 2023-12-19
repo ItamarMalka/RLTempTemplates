@@ -6,4 +6,4 @@ deploy:
       after: 
       - name: 'complex command run'
         run: |
-        ls || ./script.sh
+          ls || ./script.sh

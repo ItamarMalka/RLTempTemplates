@@ -7,7 +7,7 @@ deploy:
       after: 
       - name: 'complex command run'
         run: |
-          echo "$SHELL" && ls || ./script.sh
+          echo $SHELL && ls || ./script.sh
     terraformInit:
       before:
       - name: 'RGM'

@@ -7,11 +7,12 @@ deploy:
       after: 
       - name: 'complex command run'
         run: |
-          ls || ./script.sh
+          echo "$SHELL" && ls || ./script.sh
     terraformInit:
       before:
       - name: 'RGM'
         run: echo 'hello'
       after:
       - name: 'RGM123'
-        run: echo 'hello' 
+        run: |
+          echo 'hello' && shopt -s lastpipe

@@ -7,3 +7,10 @@ deploy:
       - name: 'complex command run'
         run: |
           ls || ./script.sh
+ terraformInit:
+          before:
+            - name: 'RGM'
+            run: echo 'hello'
+          after:
+            - name: 'RGM123'
+            run: echo 'hello' 

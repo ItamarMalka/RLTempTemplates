@@ -1,7 +1,16 @@
 environments:
-  service3:
-    name: service3
+  firstRoot:
+    name: firstRoot
     templateName: Test
-    workspace: workspace
+    workspace: workspace1
     needs: []
-
+  secondRoot:
+    name: firstRoot
+    templateName: Test
+    workspace: workspace2
+    needs: []
+  needsFirst:
+    name: firstRoot
+    templateName: Test
+    workspace: workspace3
+    needs: [firstRoot]

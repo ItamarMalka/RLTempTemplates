@@ -1,21 +1,9 @@
-variable "organizationId" {}
-variable "backendHost" {
-  default = "backend-dev.api.dev.env0.com"
-}
-# Defined in the env0.yml
-variable "randomEnv" {}
-
-locals {
-  host = var.backendHost
-  org = var.organizationId
-  env = var.randomEnv
-}
 terraform {
   backend "remote" {
-    hostname = local.host
-    organization = local.org
+    hostname = "backend-dev.api.dev.env0.com"
+    organization = "3422c4cf-f9ed-4585-9041-ffa39839d7ff"
     workspaces {
-      name = "shared-environment-${local.env}"
+      name = "shared-environment-123123"
     }
   }
 }

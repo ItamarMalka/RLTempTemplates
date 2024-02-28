@@ -5,12 +5,17 @@ variable "backendHost" {
 # Defined in the env0.yml
 variable "randomEnv" {}
 
+locals {
+  host = var.backendHost
+  org = var.organizationId
+  env = var.randomEnv
+}
 terraform {
   backend "remote" {
-    hostname = var.backendHost
-    organization = var.organizationId
+    hostname = local.host
+    organization = local.org
     workspaces {
-      name = "shared-environment-${var.randomEnv}"
+      name = "shared-environment-${local.env}"
     }
   }
 }

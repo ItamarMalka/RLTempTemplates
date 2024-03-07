@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    hostname = "backend-dev.api.dev.env0.com"
-    organization = "3422c4cf-f9ed-4585-9041-ffa39839d7ff"
+    hostname = "backend-pr14973.api.dev.env0.com"
+    organization = "d43b1dbc-225b-4aaa-bf20-4d3f6f516a49"
     workspaces {
-      name = "shared-environment-123123"
+      name = "RLTempTemplates-remote-backend-77647667"
     }
   }
 }

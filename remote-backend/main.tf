@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname = "backend-pr14973.api.dev.env0.com"
-    organization = "85d4ec47-cea3-45c1-a665-b386ffb2289f"
+    organization = "eaf80d77-e792-45ee-9206-fec9d2ec5183"
     workspaces {
       name = "RLTempTemplates-remote-backend-77647667"
     }

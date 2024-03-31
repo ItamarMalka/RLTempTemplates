@@ -1,0 +1,7 @@
+version: 2
+deploy:
+  steps:
+    terraformPlan:
+      before:
+      - name: plugin-playground
+        use: https://github.com/ItamarMalka/plugin-playground

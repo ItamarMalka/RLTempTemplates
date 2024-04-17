@@ -1,3 +1,9 @@
+terraform {
+  before_hook "before_hook" {
+    commands     = ["apply", "plan"]
+    execute      = ["echo", "Running Terraform 123"]
+  }
+
 generate "null_resource" {
   path = "tg.main.tf"
   if_exists = "overwrite_terragrunt"

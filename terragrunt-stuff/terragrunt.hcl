@@ -3,6 +3,7 @@ terraform {
     commands     = ["apply", "plan"]
     execute      = ["echo", "Running Terraform 123"]
   }
+}
 
 generate "null_resource" {
   path = "tg.main.tf"

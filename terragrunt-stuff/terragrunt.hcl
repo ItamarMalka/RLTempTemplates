@@ -1,6 +1,6 @@
 terraform {
   before_hook "before_hook" {
-    commands     = ["apply", "plan"]
+    commands     = ["apply", "plan", "output"]
     execute      = ["echo", "Running Terraform 123"]
   }
 }

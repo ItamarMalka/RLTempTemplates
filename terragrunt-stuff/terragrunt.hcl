@@ -11,7 +11,7 @@ generate "null_resource" {
   contents = <<EOF
 resource "null_resource" "null" {
 }
-resource "null_resource" "null" {
+resource "null_resource" "null2" {
 }
 EOF
 }

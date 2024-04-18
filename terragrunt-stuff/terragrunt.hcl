@@ -3,6 +3,14 @@ terraform {
     commands     = ["apply", "plan", "output"]
     execute      = ["echo", "Running Terraform 123"]
   }
+  before_hook "before_hook_2" {
+    commands     = ["apply", "plan", "output"]
+    execute      = ["echo", "Running Terraform 876"]
+  }
+  after_hook "after_hook" {
+    commands     = ["apply", "plan", "output"]
+    execute      = ["echo", "Running Terraform after 123"]
+  }
 }
 
 generate "null_resource" {

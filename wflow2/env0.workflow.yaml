@@ -20,22 +20,27 @@ environments:
     workspace: workspace4
     needs: [child-A]  
   child-B:  
-    templateName: child-B
+    name: child-B
+    templateName: Test
     workspace: workspace5
     needs: [service1]
   child-B1:  
-    templateName: child-B1
+    name: child-B1
+    templateName: Test
     workspace: workspace6
     needs: [child-B]  
   child-B2:  
-    templateName: child-B2
+    name: child-B2
+    templateName: Test
     workspace: workspace7
     needs: [child-B]
   child-C:  
-    templateName: child-C
+    name: child-C
+    templateName: Test
     workspace: workspace8
     needs: [service1]
   child-C1:  
-    templateName: child-C1
+    name: child-C1
+    templateName: Test
     workspace: workspace9
     needs: [child-C]   

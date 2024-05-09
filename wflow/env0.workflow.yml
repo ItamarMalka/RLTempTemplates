@@ -4,4 +4,4 @@ environments:
     templateName: Test
     workspace: workspace
     needs: []
-    userRequiresApproval: true
+    requiresApproval: true

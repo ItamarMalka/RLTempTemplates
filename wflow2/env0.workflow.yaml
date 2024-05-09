@@ -4,6 +4,7 @@ environments:
     templateName: Test
     workspace: root
     needs: []
+    requiresApproval: true
   service1:
     name: service1
     templateName: Test

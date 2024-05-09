@@ -1,9 +1,14 @@
 environments:
+  root:
+    name: root
+    templateName: Test
+    workspace: root
+    needs: []
   service1:
     name: service1
     templateName: Test
     workspace: workspace1
-    needs: []
+    needs: [root]
   service2:
     name: service2
     templateName: Test

@@ -1,7 +1,52 @@
 environments:
-  service3:
-    name: service3
+  service1:
+    name: service1
     templateName: Test
-    workspace: workspace
+    workspace: workspace1
     needs: []
-
+  service2:
+    name: service2
+    templateName: Test
+    workspace: workspace12
+    needs: []
+    requiresApproval: true
+  child-A:
+    name: child-A
+    templateName: Test
+    workspace: workspace2
+    needs: [service1]
+  child-A1:
+    name: child-A1
+    templateName: Test
+    workspace: workspace3
+    needs: [child-A]
+  child-A2:
+    name: child-A2
+    templateName: Test
+    workspace: workspace4
+    needs: [child-A]  
+  child-B:  
+    name: child-B
+    templateName: Test
+    workspace: workspace5
+    needs: [service1]
+  child-B1:  
+    name: child-B1
+    templateName: Test
+    workspace: workspace6
+    needs: [child-B]  
+  child-B2:  
+    name: child-B2
+    templateName: Test
+    workspace: workspace7
+    needs: [child-B]
+  child-C:  
+    name: child-C
+    templateName: Test
+    workspace: workspace8
+    needs: [service1]
+  child-C1:  
+    name: child-C1
+    templateName: Test
+    workspace: workspace9
+    needs: [child-C]   

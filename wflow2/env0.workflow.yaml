@@ -30,17 +30,20 @@ environments:
     name: child-A2
     templateName: Test
     workspace: workspace4
-    needs: [child-A]  
+    needs: [child-A]
+    requiresApproval: false
   child-B:  
     name: child-B
     templateName: Test
     workspace: workspace5
     needs: [service1]
+    requiresApproval: true
   child-B1:  
     name: child-B1
     templateName: Test
     workspace: workspace6
-    needs: [child-B]  
+    needs: [child-B]
+    requiresApproval: true
   child-B2:  
     name: child-B2
     templateName: Test

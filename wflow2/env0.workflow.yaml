@@ -59,3 +59,5 @@ environments:
     templateName: Test
     workspace: workspace9
     needs: [child-C]   
+settings:
+  environmentRemovalStrategy: destroy

@@ -5,3 +5,6 @@ deploy:
     setupVariables:
       after: 
         - echo "Good morning!!"
+    terraformPlan:
+      after:
+        - cat env0.env-vars.json

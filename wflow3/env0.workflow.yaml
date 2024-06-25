@@ -4,9 +4,9 @@ environments:
     templateName: Test
     workspace: workspace
     needs: []
-    requiresApproval: true
   service2:
     name: service2
     templateName: Test
     workspace: workspace1
     needs: [service1]
+    requiresApproval: true

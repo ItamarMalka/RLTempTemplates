@@ -8,5 +8,5 @@ environments:
   service2:
     name: service2
     templateName: Test
-    workspace: workspace
+    workspace: workspace1
     needs: [service1]

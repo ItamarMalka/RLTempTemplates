@@ -1,63 +1,47 @@
 environments:
-  root:
-    name: root
+  shared:
+    name: shared
     templateName: Test
-    workspace: root
+    workspace: shared
     needs: []
     requiresApproval: true
-  service1:
-    name: service1
-    templateName: Test
-    workspace: workspace1
-    needs: [root]
-  service2:
-    name: service2
+  prerequisites:
+    name: prerequisites
     templateName: Test
     workspace: workspace12
     needs: []
     requiresApproval: true
-  child-A:
-    name: child-A
+  api-workload:
+    name: api-workload
     templateName: Test
     workspace: workspace2
-    needs: [service1]
-  child-A1:
-    name: child-A1
+    needs: [shared, prerequisites]
+  api-tests:
+    name: api-tests
     templateName: Test
     workspace: workspace3
-    needs: [child-A]
-  child-A2:
-    name: child-A2
+    needs: [api-workload]
+  outbound-services:
+    name: outbound-services
     templateName: Test
     workspace: workspace4
-    needs: [child-A]
+    needs: [api-tests]
     requiresApproval: false
-  child-B:  
-    name: child-B
+  data-services:  
+    name: data-services
     templateName: Test
     workspace: workspace5
-    needs: [service1]
+    needs: [shared, prerequisites]
     requiresApproval: true
-  child-B1:  
-    name: child-B1
-    templateName: Test
-    workspace: workspace6
-    needs: [child-B]
-    requiresApproval: true
-  child-B2:  
-    name: child-B2
-    templateName: Test
-    workspace: workspace7
-    needs: [child-B]
-  child-C:  
-    name: child-C
+  vpc:  
+    name: vpc
     templateName: Test
     workspace: workspace8
-    needs: [service1]
-  child-C1:  
-    name: child-C1
+    needs: [shared, prerequisites]
+  post-deploy:  
+    name: post-deploy
     templateName: Test
     workspace: workspace9
-    needs: [child-C]   
+    needs: [data-services, outbound-services, vpc]   
 settings:
   environmentRemovalStrategy: destroy

@@ -3,6 +3,7 @@ terraform {
 }
 
 resource "null_resource" "null" {
+  count = 100
 }
 
 resource "null_resource" "null2" {

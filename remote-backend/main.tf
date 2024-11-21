@@ -13,16 +13,6 @@ terraform {
   }
 }
 
-resource "null_resource" "null1" {
-}
-
-
-resource "null_resource" "fail" {
-  provisioner "local-exec" {
-    command = "exit 1" # Forces failure
-  }
-}
-
 resource "null_resource" "null" {
 }
 

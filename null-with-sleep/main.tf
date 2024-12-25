@@ -3,7 +3,7 @@ terraform {
 }
 
 resource "null_resource" "null" {
-  count = 10000
+  count = 10
 }
 
 resource "null_resource" "null2" {
@@ -13,7 +13,7 @@ resource "null_resource" "null33" {
 }
 
 resource "random_id" "random" {
-  byte_length = 24250
+  byte_length = 20
 }
 
 output "long1" {

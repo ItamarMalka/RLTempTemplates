@@ -1,0 +1,21 @@
+environments:
+  service1:
+    name: service1
+    templateName: Test
+    needs: []
+  service2:
+    name: service2
+    templateName: Test
+    needs: [service1]
+  service3:
+    name: service3
+    templateName: Test
+    needs: [service1]
+  service4:
+    name: service4
+    templateName: Test
+    needs: [service3]
+  service5:
+    name: service5
+    templateName: Test
+    needs: []

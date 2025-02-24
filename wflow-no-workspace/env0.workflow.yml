@@ -5,6 +5,7 @@ environments:
     needs: []
   service2:
     name: service2
+    workspace: someSpaceOfWork
     templateName: Test
     needs: [service1]
   service3:

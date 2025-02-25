@@ -20,9 +20,9 @@ environments:
     needs: [service3]
   service5:
     name: service5
-    templateName: Test
+    templateName: Test1
     needs: []
   service6:
     name: service6
-    templateName: Test
+    templateName: Test2
     needs: [service5]

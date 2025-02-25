@@ -22,3 +22,7 @@ environments:
     name: service5
     templateName: Test
     needs: []
+  service6:
+    name: service6
+    templateName: Test
+    needs: [service5]

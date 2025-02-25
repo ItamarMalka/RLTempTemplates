@@ -14,13 +14,3 @@ environments:
     templateName: Test
     workspace: workspace3
     needs: [service1]
-  service4:
-    name: service4
-    templateName: Test
-    workspace: workspace4
-    needs: [service3]
-  service5:
-    name: service5
-    templateName: Test
-    workspace: workspace5
-    needs: []

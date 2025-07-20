@@ -5,5 +5,5 @@ deploy:
     setupVariables:
       after: 
         - echo "POOPA-MASTER....."
-        - curl -s -L -o opa "https://openpolicyagent.org/downloads/v1.0.0/opa_linux_amd64_static"
+        - curl -s -L -o opa "https://openpolicyagent.org/downloads/v0.46.1/opa_linux_amd64_static"
         - chmod 755 ./opa

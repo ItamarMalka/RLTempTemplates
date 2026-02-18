@@ -2,11 +2,9 @@ environments:
   producer:
     name: producer
     templateName: ENG-1156 QA Producer
-    workspace: default
     needs: []
   consumer:
     name: consumer
     templateName: ENG-1156 QA Consumer
-    workspace: default
     needs:
       - producer

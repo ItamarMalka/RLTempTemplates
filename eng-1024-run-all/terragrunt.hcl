@@ -1,1 +1,4 @@
-skip = true
+exclude {
+  if      = true
+  actions = ["all"]
+}
